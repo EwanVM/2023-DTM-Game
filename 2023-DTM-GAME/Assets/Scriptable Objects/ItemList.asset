@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00ace334b140824f827fb52089e0a58, type: 3}
+  m_Name: ItemList
+  m_EditorClassIdentifier: 
+  itemList:
+  - itemName: Gun
+    itemDescription: 
+    itemIcon: {fileID: 21300000, guid: 45133fcac8fe0764bb816d57d187c8f8, type: 3}
+    itemObject: {fileID: 3681184141669113427, guid: 2a0589cbf10e9f943991f1fa7ba61ad1, type: 3}
+    isUnique: 1
+  - itemName: Beartrap
+    itemDescription: 
+    itemIcon: {fileID: 21300000, guid: aed51d57fda8f3a4ab711614e9f3ce0e, type: 3}
+    itemObject: {fileID: 919132149155446097, guid: 7d0136226a6473c42894e8bfcf9124f6, type: 3}
+    isUnique: 1
+  - itemName: Radio
+    itemDescription: 
+    itemIcon: {fileID: 21300000, guid: 5f2a02ba163f027429667739409ef4fe, type: 3}
+    itemObject: {fileID: 3493048315491332693, guid: a5692252a65d2784fad5bd6673ab750f, type: 3}
+    isUnique: 1
+  - itemName: Key
+    itemDescription: 
+    itemIcon: {fileID: 21300000, guid: c7c141a3689bb8d4395ef7822ce0091c, type: 3}
+    itemObject: {fileID: 3019568617730713240, guid: 5dd5a1ab6047d4848b7668734815016f, type: 3}
+    isUnique: 0
