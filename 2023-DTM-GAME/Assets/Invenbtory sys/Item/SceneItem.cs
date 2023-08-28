@@ -39,17 +39,17 @@ public class SceneItem : MonoBehaviour
     void Start()
     {
         //find our InventoryItemList so we can pick our item from the list
-    //    database = FindObjectOfType<InventoryItemList>();
-     //   Debug.Log(database);
+        database = FindObjectOfType<InventoryItemList>();
+        Debug.Log(database);
 
 
-        //    uniqueID = GetComponent<UniqueID>();
+            //uniqueID = GetComponent<UniqueID>();
 
-        //     collectibleItemSet = FindObjectOfType<CollectibleItemSet>();
+             //collectibleItemSet = FindObjectOfType<CollectibleItemSet>();
         //if (collectibleItemSet.CollectedItems.Contains(uniqueID.ID))
         //{
-        //    Destroy(this.gameObject);
-        //    return;
+          //  Destroy(this.gameObject);
+          //  return;
         //}
 
     }
@@ -58,25 +58,25 @@ public class SceneItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //        collectibleItemSet.CollectedItems.Add(uniqueID.ID);
+                    //collectibleItemSet.CollectedItems.Add(uniqueID.ID);
 
             if (!hasRun)
             {
                 //add item to the Inventory we want, the players
-                //if (other.GetComponent<Inventory>().characterItems.Count < other.GetComponent<Inventory>().inventoryDisplay.numberOfSlots)
-                //{
+                if (other.GetComponent<Inventory>().characterItems.Count < other.GetComponent<Inventory>().inventoryDisplay.numberOfSlots)
+                {
                     other.GetComponent<Inventory>().AddItem(itemName);
                     Destroy(gameObject);  //get rid of item in the game world
-                //}
-                //else if (other.GetComponent<Inventory>().characterItems.Count == other.GetComponent<Inventory>().inventoryDisplay.numberOfSlots)
+                }
+                else if (other.GetComponent<Inventory>().characterItems.Count == other.GetComponent<Inventory>().inventoryDisplay.numberOfSlots)
 
-                //{
-                //    inventoryFullText.SetActive(true);
-                //}
+                {
+                    inventoryFullText.SetActive(true);
+                }
 
                 hasRun = true;
 
-                //other.GetComponent<Inventory>().AddItem(itemName);
+                other.GetComponent<Inventory>().AddItem(itemName);
                 
 
             }

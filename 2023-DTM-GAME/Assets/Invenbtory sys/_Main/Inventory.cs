@@ -34,11 +34,11 @@ namespace IvyMoon //this creates a namespace for all of the IvyMoon scripts so t
         private void Update()
         {
             //--------fill up the whole inventory-----------------------//
-            //if (characterItems.Count < inventoryDisplay.numberOfSlots)
-            //{
-            //    Debug.Log(characterItems.Count);
+            if (characterItems.Count < inventoryDisplay.numberOfSlots)
+            {
+                Debug.Log(characterItems.Count);
             //    GiveItem("Red Ball");
-            //}
+            }
             //---------------------------------------------------------//
 
             //  Debug.Log("char inventory - items count: " + characterItems.Count);
@@ -58,8 +58,8 @@ namespace IvyMoon //this creates a namespace for all of the IvyMoon scripts so t
             InventoryItem itemToAdd = database.GetItem(itemName);   //get reference to our listed item
             characterItems.Add(itemToAdd);                                   //add reference to our local items list
             inventoryDisplay.AddNewItem(itemToAdd);
-            //     InventoryEvents.OnItemAddedToInventory(itemToAdd);      //call event using our referenced item, the event will tell the display to show it.
-            //   Debug.Log("Item addded: " + itemToAdd.itemName);
+                 //InventoryEvents.OnItemAddedToInventory(itemToAdd);      //call event using our referenced item, the event will tell the display to show it.
+               Debug.Log("Item addded: " + itemToAdd.itemName);
         }
 
         public void AddItems(List<InventoryItem> items)
