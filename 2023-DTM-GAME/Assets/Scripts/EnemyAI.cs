@@ -26,12 +26,10 @@ public class EnemyAI : MonoBehaviour
 
             if (distanceToPlayer <= attackRange)
             {
-                // Attack logic here (deal damage to player)
                 DealDamageToPlayer();
             }
             else
             {
-                // Movement logic here
                 bool isWalking = agent.velocity.magnitude > 0.1f; // Set IsWalking based on velocity
                 animator.SetBool("isWalking", isWalking);
             }

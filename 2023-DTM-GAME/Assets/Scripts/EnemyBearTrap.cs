@@ -30,7 +30,5 @@ public class EnemyBearTrap : MonoBehaviour
         {
             healthComponent.TakeDamage(damageAmount);
         }
-
-        // You might also want to disable movement or other actions on the captured entity
     }
 }

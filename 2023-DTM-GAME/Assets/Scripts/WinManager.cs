@@ -3,7 +3,7 @@ using UnityEngine;
 public class WinManager : MonoBehaviour
 {
     public GameObject winScreenUI;
-    public GameObject[] entitiesToCheck; // Entities to check for destruction
+    public GameObject[] entitiesToCheck;
 
     private bool hasWon = false;
 

@@ -8,15 +8,11 @@ public class GunFire : MonoBehaviour
 
     public float speed = 40f;
 
-
-
-    // Use this for initialization
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
