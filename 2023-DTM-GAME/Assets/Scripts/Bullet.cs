@@ -5,15 +5,26 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 40f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int damageAmount = 20; // Amount of damage dealt to enemies
 
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damageAmount);
+            }
+        }
+
+        Destroy(gameObject);
+    }
 }
+
+
